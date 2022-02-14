@@ -1,4 +1,4 @@
-package com.whale.framework.repository.common.vo.system;
+package com.whale.framework.repository.common.vo.system.role;
 
 import com.whale.framework.repository.common.vo.PageParam;
 import io.swagger.annotations.ApiModel;

@@ -3,8 +3,8 @@ package com.whale.framework.repository.mapper.krplus;
 import com.whale.framework.mybatis.core.mapper.BaseMapperX;
 import com.whale.framework.mybatis.core.query.QueryWrapperX;
 import com.whale.framework.repository.common.vo.PageResult;
-import com.whale.framework.repository.common.vo.system.SysRoleExportReqVO;
-import com.whale.framework.repository.common.vo.system.SysRolePageReqVO;
+import com.whale.framework.repository.common.vo.system.role.SysRoleExportReqVO;
+import com.whale.framework.repository.common.vo.system.role.SysRolePageReqVO;
 import com.whale.framework.repository.model.krplus.SysRole;
 import org.springframework.lang.Nullable;
 
