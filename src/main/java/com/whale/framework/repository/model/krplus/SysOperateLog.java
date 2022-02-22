@@ -1,10 +1,14 @@
 package com.whale.framework.repository.model.krplus;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler;
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.Map;
 
 /**
  * <p>
@@ -14,7 +18,7 @@ import java.time.LocalDateTime;
  * @author trendong
  * @since 2021-11-27
  */
-@TableName("sys_operate_log")
+@TableName(value = "sys_operate_log", autoResultMap = true)
 public class SysOperateLog implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -48,7 +52,8 @@ public class SysOperateLog implements Serializable {
     /**
      * 操作分类
      */
-    private Long operateType;
+    @TableField("operate_type")
+    private Long type;
 
     /**
      * 操作内容
@@ -58,7 +63,8 @@ public class SysOperateLog implements Serializable {
     /**
      * 拓展字段
      */
-    private String exts;
+    @TableField(typeHandler = JacksonTypeHandler.class)
+    private Map<String,Object> exts;
 
     /**
      * 请求方法名
@@ -181,12 +187,12 @@ public class SysOperateLog implements Serializable {
         this.name = name;
     }
 
-    public Long getOperateType() {
-        return operateType;
+    public Long getType() {
+        return type;
     }
 
-    public void setOperateType(Long operateType) {
-        this.operateType = operateType;
+    public void setType(Long type) {
+        this.type = type;
     }
 
     public String getContent() {
@@ -197,11 +203,11 @@ public class SysOperateLog implements Serializable {
         this.content = content;
     }
 
-    public String getExts() {
+    public Map<String, Object> getExts() {
         return exts;
     }
 
-    public void setExts(String exts) {
+    public void setExts(Map<String, Object> exts) {
         this.exts = exts;
     }
 
@@ -336,30 +342,31 @@ public class SysOperateLog implements Serializable {
     @Override
     public String toString() {
         return "SysOperateLog{" +
-        "id=" + id +
-        ", traceId=" + traceId +
-        ", userId=" + userId +
-        ", module=" + module +
-        ", name=" + name +
-        ", operateType=" + operateType +
-        ", content=" + content +
-        ", exts=" + exts +
-        ", requestMethod=" + requestMethod +
-        ", requestUrl=" + requestUrl +
-        ", userIp=" + userIp +
-        ", userAgent=" + userAgent +
-        ", javaMethod=" + javaMethod +
-        ", javaMethodArgs=" + javaMethodArgs +
-        ", startTime=" + startTime +
-        ", duration=" + duration +
-        ", resultCode=" + resultCode +
-        ", resultMsg=" + resultMsg +
-        ", resultData=" + resultData +
-        ", creator=" + creator +
-        ", createTime=" + createTime +
-        ", updater=" + updater +
-        ", updateTime=" + updateTime +
-        ", deleted=" + deleted +
-        "}";
+                "id=" + id +
+                ", traceId='" + traceId + '\'' +
+                ", userId=" + userId +
+                ", module='" + module + '\'' +
+                ", name='" + name + '\'' +
+                ", type=" + type +
+                ", content='" + content + '\'' +
+                ", exts=" + exts +
+                ", requestMethod='" + requestMethod + '\'' +
+                ", requestUrl='" + requestUrl + '\'' +
+                ", userIp='" + userIp + '\'' +
+                ", userAgent='" + userAgent + '\'' +
+                ", javaMethod='" + javaMethod + '\'' +
+                ", javaMethodArgs='" + javaMethodArgs + '\'' +
+                ", startTime=" + startTime +
+                ", duration=" + duration +
+                ", resultCode=" + resultCode +
+                ", resultMsg='" + resultMsg + '\'' +
+                ", resultData='" + resultData + '\'' +
+                ", creator='" + creator + '\'' +
+                ", createTime=" + createTime +
+                ", updater='" + updater + '\'' +
+                ", updateTime=" + updateTime +
+                ", deleted='" + deleted + '\'' +
+                '}';
     }
+
 }

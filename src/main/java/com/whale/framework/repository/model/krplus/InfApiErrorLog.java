@@ -1,10 +1,14 @@
 package com.whale.framework.repository.model.krplus;
 
+import cn.hutool.core.exceptions.ExceptionUtil;
+
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Builder;
+
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * <p>
@@ -14,6 +18,7 @@ import java.time.LocalDateTime;
  * @author trendong
  * @since 2021-11-27
  */
+@Builder
 @TableName("inf_api_error_log")
 public class InfApiErrorLog implements Serializable {
 
@@ -23,7 +28,7 @@ public class InfApiErrorLog implements Serializable {
      * 编号
      */
     @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
+    private Long id;
 
     /**
      * 链路追踪编号
@@ -35,7 +40,7 @@ public class InfApiErrorLog implements Serializable {
     /**
      * 用户编号
      */
-    private Integer userId;
+    private Long userId;
 
     /**
      * 用户类型
@@ -77,7 +82,7 @@ public class InfApiErrorLog implements Serializable {
     /**
      * 异常发生时间
      */
-    private LocalDateTime exceptionTime;
+    private Date exceptionTime;
 
     /**
      * 异常名
@@ -89,21 +94,21 @@ public class InfApiErrorLog implements Serializable {
     /**
      * 异常导致的消息
      *
-     * {@link cn.iocoder.common.framework.util.ExceptionUtil#getMessage(Throwable)}
+     * {@link ExceptionUtil#getMessage(Throwable)}
      */
     private String exceptionMessage;
 
     /**
      * 异常导致的根消息
      *
-     * {@link cn.iocoder.common.framework.util.ExceptionUtil#getRootCauseMessage(Throwable)}
+     * {@link ExceptionUtil#getRootCauseMessage(Throwable)}
      */
     private String exceptionRootCauseMessage;
 
     /**
      * 异常的栈轨迹
-     *
-     * {@link cn.iocoder.common.framework.util.ExceptionUtil#getServiceException(Exception)}
+     *x
+     * {@link org.apache.commons.lang3.exception.ExceptionUtils#getStackTrace(Throwable)}
      */
     private String exceptionStackTrace;
 
@@ -143,12 +148,12 @@ public class InfApiErrorLog implements Serializable {
     /**
      * 处理时间
      */
-    private LocalDateTime processTime;
+    private Date processTime;
 
     /**
      * 处理用户编号
      */
-    private Integer processUserId;
+    private Long processUserId;
 
     /**
      * 创建者
@@ -158,7 +163,7 @@ public class InfApiErrorLog implements Serializable {
     /**
      * 创建时间
      */
-    private LocalDateTime createTime;
+    private Date createTime;
 
     /**
      * 更新者
@@ -168,7 +173,7 @@ public class InfApiErrorLog implements Serializable {
     /**
      * 更新时间
      */
-    private LocalDateTime updateTime;
+    private Date updateTime;
 
     /**
      * 是否删除
@@ -176,11 +181,11 @@ public class InfApiErrorLog implements Serializable {
     private String deleted;
 
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -192,11 +197,11 @@ public class InfApiErrorLog implements Serializable {
         this.traceId = traceId;
     }
 
-    public Integer getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 
@@ -256,11 +261,11 @@ public class InfApiErrorLog implements Serializable {
         this.userAgent = userAgent;
     }
 
-    public LocalDateTime getExceptionTime() {
+    public Date getExceptionTime() {
         return exceptionTime;
     }
 
-    public void setExceptionTime(LocalDateTime exceptionTime) {
+    public void setExceptionTime(Date exceptionTime) {
         this.exceptionTime = exceptionTime;
     }
 
@@ -336,19 +341,19 @@ public class InfApiErrorLog implements Serializable {
         this.processStatus = processStatus;
     }
 
-    public LocalDateTime getProcessTime() {
+    public Date getProcessTime() {
         return processTime;
     }
 
-    public void setProcessTime(LocalDateTime processTime) {
+    public void setProcessTime(Date processTime) {
         this.processTime = processTime;
     }
 
-    public Integer getProcessUserId() {
+    public Long getProcessUserId() {
         return processUserId;
     }
 
-    public void setProcessUserId(Integer processUserId) {
+    public void setProcessUserId(Long processUserId) {
         this.processUserId = processUserId;
     }
 
@@ -360,11 +365,11 @@ public class InfApiErrorLog implements Serializable {
         this.creator = creator;
     }
 
-    public LocalDateTime getCreateTime() {
+    public Date getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(LocalDateTime createTime) {
+    public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
 
@@ -376,11 +381,11 @@ public class InfApiErrorLog implements Serializable {
         this.updater = updater;
     }
 
-    public LocalDateTime getUpdateTime() {
+    public Date getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(LocalDateTime updateTime) {
+    public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
 
