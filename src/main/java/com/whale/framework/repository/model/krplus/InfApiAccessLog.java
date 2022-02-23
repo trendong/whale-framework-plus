@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * <p>
@@ -73,12 +73,12 @@ public class InfApiAccessLog implements Serializable {
     /**
      * 开始请求时间
      */
-    private LocalDateTime beginTime;
+    private Date beginTime;
 
     /**
      * 结束请求时间
      */
-    private LocalDateTime endTime;
+    private Date endTime;
 
     /**
      * 执行时长
@@ -103,7 +103,7 @@ public class InfApiAccessLog implements Serializable {
     /**
      * 创建时间
      */
-    private LocalDateTime createTime;
+    private Date createTime;
 
     /**
      * 更新者
@@ -113,7 +113,7 @@ public class InfApiAccessLog implements Serializable {
     /**
      * 更新时间
      */
-    private LocalDateTime updateTime;
+    private Date updateTime;
 
     /**
      * 是否删除
@@ -201,19 +201,19 @@ public class InfApiAccessLog implements Serializable {
         this.userAgent = userAgent;
     }
 
-    public LocalDateTime getBeginTime() {
+    public Date getBeginTime() {
         return beginTime;
     }
 
-    public void setBeginTime(LocalDateTime beginTime) {
+    public void setBeginTime(Date beginTime) {
         this.beginTime = beginTime;
     }
 
-    public LocalDateTime getEndTime() {
+    public Date getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(LocalDateTime endTime) {
+    public void setEndTime(Date endTime) {
         this.endTime = endTime;
     }
 
@@ -249,11 +249,11 @@ public class InfApiAccessLog implements Serializable {
         this.creator = creator;
     }
 
-    public LocalDateTime getCreateTime() {
+    public Date getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(LocalDateTime createTime) {
+    public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
 
@@ -265,11 +265,11 @@ public class InfApiAccessLog implements Serializable {
         this.updater = updater;
     }
 
-    public LocalDateTime getUpdateTime() {
+    public Date getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(LocalDateTime updateTime) {
+    public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
 
@@ -284,26 +284,26 @@ public class InfApiAccessLog implements Serializable {
     @Override
     public String toString() {
         return "InfApiAccessLog{" +
-        "id=" + id +
-        ", traceId=" + traceId +
-        ", userId=" + userId +
-        ", userType=" + userType +
-        ", applicationName=" + applicationName +
-        ", requestMethod=" + requestMethod +
-        ", requestUrl=" + requestUrl +
-        ", requestParams=" + requestParams +
-        ", userIp=" + userIp +
-        ", userAgent=" + userAgent +
-        ", beginTime=" + beginTime +
-        ", endTime=" + endTime +
-        ", duration=" + duration +
-        ", resultCode=" + resultCode +
-        ", resultMsg=" + resultMsg +
-        ", creator=" + creator +
-        ", createTime=" + createTime +
-        ", updater=" + updater +
-        ", updateTime=" + updateTime +
-        ", deleted=" + deleted +
-        "}";
+                "id=" + id +
+                ", traceId='" + traceId + '\'' +
+                ", userId=" + userId +
+                ", userType=" + userType +
+                ", applicationName='" + applicationName + '\'' +
+                ", requestMethod='" + requestMethod + '\'' +
+                ", requestUrl='" + requestUrl + '\'' +
+                ", requestParams='" + requestParams + '\'' +
+                ", userIp='" + userIp + '\'' +
+                ", userAgent='" + userAgent + '\'' +
+                ", beginTime=" + beginTime +
+                ", endTime=" + endTime +
+                ", duration=" + duration +
+                ", resultCode=" + resultCode +
+                ", resultMsg='" + resultMsg + '\'' +
+                ", creator='" + creator + '\'' +
+                ", createTime=" + createTime +
+                ", updater='" + updater + '\'' +
+                ", updateTime=" + updateTime +
+                ", deleted='" + deleted + '\'' +
+                '}';
     }
 }
