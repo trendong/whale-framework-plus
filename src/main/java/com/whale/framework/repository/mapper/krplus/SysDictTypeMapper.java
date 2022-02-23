@@ -1,12 +1,11 @@
 package com.whale.framework.repository.mapper.krplus;
 
+import com.whale.framework.common.pojo.PageResult;
 import com.whale.framework.mybatis.core.mapper.BaseMapperX;
 import com.whale.framework.mybatis.core.query.QueryWrapperX;
-import com.whale.framework.repository.common.vo.PageResult;
-import com.whale.framework.repository.common.vo.system.dict.SysDictTypeExportReqVO;
-import com.whale.framework.repository.common.vo.system.dict.SysDictTypePageReqVO;
+import com.whale.framework.repository.vo.system.dict.SysDictTypeExportReqVO;
+import com.whale.framework.repository.vo.system.dict.SysDictTypePageReqVO;
 import com.whale.framework.repository.model.krplus.SysDictType;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 import java.util.List;
 

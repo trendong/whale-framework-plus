@@ -1,4 +1,4 @@
-package com.whale.framework.repository.common.vo.system.role;
+package com.whale.framework.repository.vo.system.role;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

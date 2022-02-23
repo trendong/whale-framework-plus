@@ -3,8 +3,8 @@ package com.whale.framework.mybatis.core.util;
 import cn.hutool.core.collection.CollectionUtil;
 import com.baomidou.mybatisplus.core.metadata.OrderItem;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.whale.framework.repository.common.vo.PageParam;
-import com.whale.framework.repository.common.vo.SortingField;
+import com.whale.framework.common.pojo.PageParam;
+import com.whale.framework.common.pojo.SortingField;
 
 import java.util.Collection;
 import java.util.stream.Collectors;

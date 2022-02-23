@@ -1,6 +1,6 @@
-package com.whale.framework.repository.common.vo.system.dict;
+package com.whale.framework.repository.vo.system.dict;
 
-import com.whale.framework.repository.common.vo.PageParam;
+import com.whale.framework.common.pojo.PageParam;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

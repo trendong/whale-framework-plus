@@ -1,4 +1,4 @@
-package com.whale.framework.repository.common.vo.system.menu;
+package com.whale.framework.repository.vo.system.menu;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

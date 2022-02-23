@@ -1,12 +1,11 @@
 package com.whale.framework.repository.mapper.krplus;
 
+import com.whale.framework.common.pojo.PageResult;
 import com.whale.framework.mybatis.core.mapper.BaseMapperX;
 import com.whale.framework.mybatis.core.query.QueryWrapperX;
-import com.whale.framework.repository.common.vo.PageResult;
-import com.whale.framework.repository.common.vo.infra.apierrorlog.InfApiErrorLogExportReqVO;
-import com.whale.framework.repository.common.vo.infra.apierrorlog.InfApiErrorLogPageReqVO;
+import com.whale.framework.repository.vo.infra.apierrorlog.InfApiErrorLogExportReqVO;
+import com.whale.framework.repository.vo.infra.apierrorlog.InfApiErrorLogPageReqVO;
 import com.whale.framework.repository.model.krplus.InfApiErrorLog;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
