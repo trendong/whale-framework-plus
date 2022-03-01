@@ -1,9 +1,16 @@
-HELP.md
+### Git Ignore ###
+rebel.xml
 target/
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
-
+log.path_IS_UNDEFINED
+.DS_Store
+spy.log
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+.flattened-pom.xml
 ### STS ###
 .apt_generated
 .classpath
@@ -11,23 +18,3 @@ target/
 .project
 .settings
 .springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
-.vscode/

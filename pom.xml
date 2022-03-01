@@ -3,35 +3,27 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <groupId>com.whale</groupId>
-    <artifactId>whale-framework-plus</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <parent>
+        <artifactId>whale-tools</artifactId>
+        <groupId>com.whale</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
     <modelVersion>4.0.0</modelVersion>
+    <artifactId>whale-framework-plus</artifactId>
+    <packaging>jar</packaging>
+    <name>${artifactId}</name>
 
     <properties>
-        <revision>1.0-SNAPSHOT</revision>
-
         <mysql.version>8.0.27</mysql.version>
-        <mybatis-plus.version>3.5.1</mybatis-plus.version>
-        <dynamic-datasource.version>3.5.1</dynamic-datasource.version>
         <spring-core.version>5.3.12</spring-core.version>
     </properties>
 
     <dependencies>
 
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>${spring-core.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
             <groupId>com.whale</groupId>
             <artifactId>whale-common</artifactId>
-            <version>${revision}</version>
         </dependency>
 
         <dependency>
@@ -43,12 +35,10 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
-            <version>${dynamic-datasource.version}</version>
         </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>${mybatis-plus.version}</version>
         </dependency>
 
     </dependencies>
